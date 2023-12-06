@@ -30,7 +30,7 @@ public class YenBasicOperations {
         return this;
     }
 
-    public Yen build() {
+    public Yen end() {
         return this.yen;
     }
 

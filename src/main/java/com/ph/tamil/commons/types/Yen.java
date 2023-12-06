@@ -4,6 +4,7 @@ import com.ph.tamil.commons.constants.TypesConstant;
 import com.ph.tamil.commons.exception.InvalidYenException;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Yen implements Comparable<Yen> {
 
@@ -82,4 +83,13 @@ public class Yen implements Comparable<Yen> {
     public int compareTo(Yen o) {
         return this.toInt() - o.toInt();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Yen yen = (Yen) o;
+        return this.toInt() == yen.toInt();
+    }
+
 }

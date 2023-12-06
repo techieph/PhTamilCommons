@@ -15,7 +15,7 @@ public class YenBasicOperationsTests {
                 .kalithal(new Yen("௪௫")) // 45
                 .peruthal(new Yen(1)) // 1
                 .vaguthal(new Yen("-௨")) // -2
-                .build();
+                .end();
         assertEquals(yen.toInt(), -39);
         assertTrue(yen.toString().equals("-௩௯")); // -39
     }
