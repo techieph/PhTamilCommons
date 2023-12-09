@@ -6,7 +6,7 @@ public class YenBasicOperations {
 
     Yen yen;
 
-    YenBasicOperations(Yen yen) {
+    public YenBasicOperations(Yen yen) {
         this.yen = yen;
     }
 

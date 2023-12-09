@@ -14,7 +14,7 @@ public class AsciiYezhluthuMapSupplier {
             if(data.isEmpty()) {
                 int index = 1;
                 for (String yezhuluthu : YezhluthukalData.yezhuluthukalData) {
-                    String key = yezhuluthu.charAt(0) + (yezhuluthu.length() == 2 ? "-" + yezhuluthu.charAt(1) : "");
+                    String key = String.valueOf( (int) yezhuluthu.charAt(0)) + (yezhuluthu.length() == 2 ? "-" + String.valueOf( (int) yezhuluthu.charAt(1)) : "");
                     data.put(key, index++);
                 }
             }

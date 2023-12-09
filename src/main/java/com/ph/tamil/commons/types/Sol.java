@@ -18,7 +18,7 @@ public class Sol implements Comparable<Sol> {
     }
     
     Sol(char ch) throws InvalidYezhluthuException {
-        new Sol(Character.toString(ch));
+        this(Character.toString(ch));
     }
 
     public Sol(String string) throws InvalidYezhluthuException {

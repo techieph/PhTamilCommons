@@ -10,17 +10,17 @@ public class Yezhluthu implements Comparable<Yezhluthu> {
 
     int yezhluthuIndex;
 
-    Yezhluthu(char ch) throws InvalidYezhluthuException {
-        new Yezhluthu(Character.toString(ch));
+    public Yezhluthu(char ch) throws InvalidYezhluthuException {
+        this(Character.toString(ch));
     }
 
-    Yezhluthu(String string) throws InvalidYezhluthuException {
+    public Yezhluthu(String string) throws InvalidYezhluthuException {
         if(string.isEmpty() || string.length() > 2) {
             throw new InvalidYezhluthuException();
         }
-        String key = (int) string.charAt(0) + (string.length() == 1 ? "-" + (int) string.charAt(1) : "");
+        String key = (int) string.charAt(0) + (string.length() == 2 ? "-" + (int) string.charAt(1) : "");
         if(AsciiYezhluthuMapSupplier.getAsciiYezhluthuMapSupplier().get().containsKey(key)){
-            yezhluthuIndex = AsciiYezhluthuMapSupplier.getAsciiYezhluthuMapSupplier().get().get(String.valueOf((int) string.charAt(0)));
+            yezhluthuIndex = AsciiYezhluthuMapSupplier.getAsciiYezhluthuMapSupplier().get().get(key);
         } else {
             throw new InvalidYezhluthuException();
         }
@@ -35,16 +35,16 @@ public class Yezhluthu implements Comparable<Yezhluthu> {
     }
 
     public String toString() {
-        return YezhluthuDetailsData.getYezhluthuDetails.apply(this.yezhluthuIndex).getYezhluthuString();
+        return YezhluthuDetailsData.getYezhluthuDetails.apply(yezhluthuIndex).getYezhluthuString();
     }
 
     public YezhluthuDetails getYezhluthuDetails() {
-        return YezhluthuDetailsData.getYezhluthuDetails.apply(this.yezhluthuIndex);
+        return YezhluthuDetailsData.getYezhluthuDetails.apply(yezhluthuIndex);
     }
 
     @Override
     public int compareTo(Yezhluthu o) {
-        return this.yezhluthuIndex - o.yezhluthuIndex;
+        return yezhluthuIndex - o.yezhluthuIndex;
     }
 
     @Override
@@ -52,6 +52,6 @@ public class Yezhluthu implements Comparable<Yezhluthu> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Yezhluthu yezhluthu = (Yezhluthu) o;
-        return this.yezhluthuIndex == yezhluthu.yezhluthuIndex;
+        return yezhluthuIndex == yezhluthu.yezhluthuIndex;
     }
 }

@@ -7,10 +7,10 @@ public enum YezhluthuSoundType {
     Mei("மெய்", 0.5);
 
     String yezhluthuSoundTypeName;
-    double yezhluthuSoundTypeLevel;
+    double yezhluthuMaathiraiLevel;
 
-    YezhluthuSoundType(String yezhluthuSoundTypeName, double yezhluthuSoundTypeLevel) {
-        this.yezhluthuSoundTypeLevel = yezhluthuSoundTypeLevel;
+    YezhluthuSoundType(String yezhluthuSoundTypeName, double yezhluthuMaathiraiLevel) {
+        this.yezhluthuMaathiraiLevel = yezhluthuMaathiraiLevel;
         this.yezhluthuSoundTypeName = yezhluthuSoundTypeName;
     }
 
@@ -19,7 +19,7 @@ public enum YezhluthuSoundType {
         return this.yezhluthuSoundTypeName;
     }
 
-    public double getYezhluthuSoundTypeLevel() {
-        return this.yezhluthuSoundTypeLevel;
+    public double getYezhluthuSoundLevel() {
+        return this.yezhluthuMaathiraiLevel;
     }
 }

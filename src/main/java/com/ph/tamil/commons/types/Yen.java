@@ -12,7 +12,7 @@ public class Yen implements Comparable<Yen> {
     boolean isPositiveNumber = true;
 
     public Yen(char character) throws InvalidYenException {
-        new Yen(Character.toString(character));
+        this(Character.toString(character));
     }
 
     public Yen(String string) throws InvalidYenException {
