@@ -466,6 +466,7 @@ public class Driver {
             Sol sol = new Sol("காத்திருந்தான்");
             sol.replace(new Yezhluthu("ன்"),new Yezhluthu("ள்"));
             System.out.println("காத்திருந்தான் is replaced to " + sol.toString());
+            System.out.println("காத்திருந்தாள் has ருந் in index " + sol.indexOf(new Sol("ருந்")));
             System.out.println("காத்திருந்தாள் starts with காத்தி is " + sol.startsWith(new Sol("காத்தி")));
             System.out.println("காத்திருந்தாள் starts with த்திருந் is " + sol.startsWith(new Sol("த்திருந்")));
             System.out.println("காத்திருந்தாள் ends with தாள் is " + sol.endsWith(new Sol("தாள்")));
@@ -481,6 +482,7 @@ public class Driver {
 ```
 ```
 காத்திருந்தான் is replaced to காத்திருந்தாள்
+காத்திருந்தாள் has ருந் in index 3
 காத்திருந்தாள் starts with காத்தி is true
 காத்திருந்தாள் starts with த்திருந் is false
 காத்திருந்தாள் ends with தாள் is true
