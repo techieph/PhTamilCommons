@@ -2,6 +2,10 @@
 
 ## Table Of Contents
 - [PhTamilCommons](#phtamilcommons)
+    - [Dependency](#dependency)
+        - [Building the Project](#building-the-project)
+        - [Contributions](#contributions)
+        - [License](#license)
     - [Yen - Class](#yen---class)
         - [Yen - Different types of creating objects and comparing them](#yen---different-types-of-creating-objects-and-comparing-them)
     - [YenBasicOperations - Class](#yenbasicoperations---class)
@@ -33,7 +37,7 @@ To use ph-tamil-commons in your Maven project, you can add the following depende
 </dependency>
 ```
 
-This will work once the artifact is published to central maven repository
+This will work once the artifact is published to central maven repository.
 
 ### Building the Project
 
@@ -47,7 +51,7 @@ This will compile the source code, run tests, and install the library into your 
 
 ### Contributions
 
-Feel free to contribute to this project by reporting issues or submitting pull requests on this Github Repository
+Feel free to contribute to this project by reporting issues or submitting pull requests on this Github Repository.
 
 ### License
 
