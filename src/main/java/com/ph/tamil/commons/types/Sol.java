@@ -9,15 +9,15 @@ public class Sol implements Comparable<Sol> {
 
     List<Yezhluthu> yezhluthuList= new ArrayList<>();
 
-    Sol(Yezhluthu[] yezhluthukal) {
+    public Sol(Yezhluthu[] yezhluthukal) {
         yezhluthuList.addAll(List.of(yezhluthukal));
     }
 
-    Sol(List<Yezhluthu> yezhluthuList) {
+    public Sol(List<Yezhluthu> yezhluthuList) {
         this.yezhluthuList = yezhluthuList;
     }
     
-    Sol(char ch) throws InvalidYezhluthuException {
+    public Sol(char ch) throws InvalidYezhluthuException {
         this(Character.toString(ch));
     }
 
@@ -27,7 +27,8 @@ public class Sol implements Comparable<Sol> {
                 yezhluthuList.add(new Yezhluthu(string.charAt(i)));
             } else {
                 try{
-                    Yezhluthu yezhluthu = new Yezhluthu(string.charAt(i) + string.charAt(i+1));
+                    Yezhluthu yezhluthu = new Yezhluthu(string.substring(i,i+2));
+                    ++i;
                     yezhluthuList.add(yezhluthu);
                 } catch (InvalidYezhluthuException e) {
                     yezhluthuList.add(new Yezhluthu(string.charAt(i)));
@@ -100,5 +101,16 @@ public class Sol implements Comparable<Sol> {
         }
         // If the common prefix is the same, the shorter list comes first
         return Integer.compare(yezhluthuList.size(), otherYezhluthuList.size());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StringBuilder sb = new StringBuilder();
+        StringBuilder sbo = new StringBuilder();
+        yezhluthuList.forEach(yezhluthu -> sb.append(yezhluthu.toString()));
+        ((Sol) o).yezhluthuList.forEach(yezhluthu -> sbo.append(yezhluthu.toString()));
+        return sb.toString().contentEquals(sbo);
     }
 }

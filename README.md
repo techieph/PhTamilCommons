@@ -1,5 +1,59 @@
 # PhTamilCommons
 
+## Table Of Contents
+- [PhTamilCommons](#phtamilcommons)
+    - [Yen - Class](#yen---class)
+        - [Yen - Different types of creating objects and comparing them](#yen---different-types-of-creating-objects-and-comparing-them)
+    - [YenBasicOperations - Class](#yenbasicoperations---class)
+        - [YenBasicOperations - Different types of operations on Yen Object](#yenbasicoperations---different-types-of-operations-on-yen-object)
+    - [Yezhuthu - Class](#yezhuthu---class)
+        - [Sorting Array of Yezhuthu Objects - Different ways to initialise](#sorting-array-of-yezhuthu-objects---different-ways-to-initialise)
+        - [Sorting Array of Yezhuthu Objects - Comparing Objects with Different types of initialising](#sorting-array-of-yezhuthu-objects---comparing-objects-with-different-types-of-initialising)
+        - [Sorting Array of Yezhuthu Objects - Normal Sorting](#sorting-array-of-yezhuthu-objects---normal-sorting)
+        - [Sorting ArrayList of Yezhuthu Objects - Normal Sorting](#sorting-arraylist-of-yezhuthu-objects---normal-sorting)
+        - [Sorting ArrayList of Yezhuthu Objects - Based on the Sound level (maathirai)](#sorting-arraylist-of-yezhuthu-objects---based-on-the-sound-level-maathirai)
+        - [Sorting ArrayList of Yezhuthu Objects - Based on Yezhluthu Type (Uyir, Mei, UyirMei, Aayutham)](#sorting-arraylist-of-yezhuthu-objects---based-on-yezhluthu-type-uyir-mei-uyirmei-aayutham)
+        - [Sorting ArrayList of Yezhuthu Objects - Based on Yezhluthu Constant Type (Valinam, Melinam, Idaiyinam, NotApplicable)](#sorting-arraylist-of-yezhuthu-objects---based-on-yezhluthu-constant-type-valinam-melinam-idaiyinam-notapplicable)
+    - [Sol - Class](#sol---class)
+        - [Sol - Different types of creation and equals](#sol---different-types-of-creation-and-equals)
+        - [Sol - Few other string methods in sol](#sol---few-other-string-methods-in-sol)
+        - [Sol - Few types of sorting with Sol](#sol---few-types-of-sorting-with-sol)
+
+## Dependency
+
+### How to Use
+
+To use ph-tamil-commons in your Maven project, you can add the following dependency to your project's pom.xml file:
+
+```xml
+<dependency>
+    <groupId>com.ph.tamil.commons</groupId>
+    <artifactId>ph-tamil-commons</artifactId>
+    <version>LATEST</version>
+</dependency>
+```
+
+This will work once the artifact is published to central maven repository
+
+### Building the Project
+
+If you want to build the ph-tamil-commons library from source, you can use the following Maven command:
+
+```
+mvn clean install
+```
+
+This will compile the source code, run tests, and install the library into your local Maven repository.
+
+### Contributions
+
+Feel free to contribute to this project by reporting issues or submitting pull requests on this Github Repository
+
+### License
+
+License
+This project is licensed under the MIT License, so feel free to use, modify, and distribute it in your projects.
+
 ## Yen - Class
 
 ### Yen - Different types of creating objects and comparing them
@@ -342,4 +396,122 @@ public class Driver {
 ```
 ```
 Sorted Array: [பூ, கீ, ஙௌ, மா, ரொ, இ, ஆ, ர், ஃ, ஸொ]
+```
+
+## Sol - Class
+
+### Sol - Different types of creation and equals
+
+```java
+package com.ph.tamil.commons.drivers;
+
+import com.ph.tamil.commons.exception.InvalidYezhluthuException;
+import com.ph.tamil.commons.types.Sol;
+import com.ph.tamil.commons.types.Yezhluthu;
+
+import java.util.Collections;
+
+public class Driver {
+
+    public static void main(String[] args) {
+        try{
+            Sol sol1 = new Sol("ஆ");
+            Sol sol2 = new Sol('ஆ');
+            Yezhluthu yezhluthu = new Yezhluthu(2);
+            Sol sol3 = new Sol(Collections.singletonList(yezhluthu));
+            if(sol1.equals(sol2) && sol2.equals(sol3)) {
+                System.out.println("Sol1, Sol2 and Sol3 are equal");
+                System.out.println("This sol is " + sol1.toString() + " and has length " + sol1.length());
+            }
+        } catch (InvalidYezhluthuException e) {
+            System.out.println("InvalidYezhluthuException: " + e.getMessage());
+        }
+    }
+
+}
+```
+```
+Sol1, Sol2 and Sol3 are equal
+This sol is ஆ and has length 1
+```
+
+### Sol - Few other string methods in sol
+
+```java
+package com.ph.tamil.commons.drivers;
+
+import com.ph.tamil.commons.exception.InvalidYezhluthuException;
+import com.ph.tamil.commons.types.Sol;
+import com.ph.tamil.commons.types.Yezhluthu;
+
+public class Driver {
+
+    public static void main(String[] args) {
+        try{
+            Sol sol = new Sol("காத்திருந்தான்");
+            sol.replace(new Yezhluthu("ன்"),new Yezhluthu("ள்"));
+            System.out.println("காத்திருந்தாள் is replaced to " + sol.toString());
+            System.out.println("காத்திருந்தாள் starts with காத்தி is " + sol.startsWith(new Sol("காத்தி")));
+            System.out.println("காத்திருந்தாள் starts with த்திருந் is " + sol.startsWith(new Sol("த்திருந்")));
+            System.out.println("காத்திருந்தாள் ends with தாள் is " + sol.endsWith(new Sol("தாள்")));
+            System.out.println("காத்திருந்தாள் ends with ருந்தா is " + sol.endsWith(new Sol("ருந்தா")));
+            System.out.println("காத்திருந்தாள் subSol from index 1 is " + sol.subSol(1));
+            System.out.println("காத்திருந்தாள் subSol from index 1 to index 4 is " + sol.subSol(1,4));
+        } catch (InvalidYezhluthuException e) {
+            System.out.println("InvalidYezhluthuException: " + e.getMessage());
+        }
+    }
+
+}
+```
+```
+காத்திருந்தாள் is replaced to காத்திருந்தாள்
+காத்திருந்தாள் starts with காத்தி is true
+காத்திருந்தாள் starts with த்திருந் is false
+காத்திருந்தாள் ends with தாள் is true
+காத்திருந்தாள் ends with ருந்தா is false
+காத்திருந்தாள் subSol from index 1 is த்திருந்தாள்
+காத்திருந்தாள் subSol from index 1 to index 4 is த்திரு
+```
+
+### Sol - Few types of sorting with Sol
+
+```java
+package com.ph.tamil.commons.drivers;
+
+import com.ph.tamil.commons.exception.InvalidYezhluthuException;
+import com.ph.tamil.commons.types.Sol;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Driver {
+
+    public static void main(String[] args) {
+        try{
+            List<Sol> solList = new ArrayList<>();
+            solList.add(new Sol("தீப்தி"));
+            solList.add(new Sol("எழிலரசன்"));
+            solList.add(new Sol("இயலிசை"));
+            solList.add(new Sol("குமரவேல்"));
+            solList.add(new Sol("மதி"));
+            Collections.sort(solList);
+            System.out.println("Asc Order: " + solList.toString() );
+            solList.sort(Comparator.reverseOrder());
+            System.out.println("Desc Order: " + solList.toString());
+            solList.sort(Comparator.comparing((Sol sol)-> sol.length()));
+            System.out.println("Length Asc Order: "+ solList.toString());
+        } catch (InvalidYezhluthuException e) {
+            System.out.println("InvalidYezhluthuException: " + e.getMessage());
+        }
+    }
+
+}
+```
+```
+Asc Order: [இயலிசை, எழிலரசன், குமரவேல், தீப்தி, மதி]
+Desc Order: [மதி, தீப்தி, குமரவேல், எழிலரசன், இயலிசை]
+Length Asc Order: [மதி, தீப்தி, இயலிசை, குமரவேல், எழிலரசன்]
 ```
