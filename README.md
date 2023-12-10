@@ -54,8 +54,8 @@ This project is licensed under the MIT License, so feel free to use, modify, and
 - [YenBasicOperations - Class](#yenbasicoperations---class)
     - [YenBasicOperations - Different types of operations on Yen Object](#yenbasicoperations---different-types-of-operations-on-yen-object)
 - [Yezhuthu - Class](#yezhuthu---class)
-    - [Sorting Array of Yezhuthu Objects - Different ways to initialise](#sorting-array-of-yezhuthu-objects---different-ways-to-initialise)
-    - [Sorting Array of Yezhuthu Objects - Comparing Objects with Different types of initialising](#sorting-array-of-yezhuthu-objects---comparing-objects-with-different-types-of-initialising)
+    - [Different ways to initialise](#different-ways-to-initialise)
+    - [Comparing Objects with Different types of initialising](#comparing-objects-with-different-types-of-initialising)
     - [Sorting Array of Yezhuthu Objects - Normal Sorting](#sorting-array-of-yezhuthu-objects---normal-sorting)
     - [Sorting ArrayList of Yezhuthu Objects - Normal Sorting](#sorting-arraylist-of-yezhuthu-objects---normal-sorting)
     - [Sorting ArrayList of Yezhuthu Objects - Based on the Sound level (maathirai)](#sorting-arraylist-of-yezhuthu-objects---based-on-the-sound-level-maathirai)
@@ -182,7 +182,7 @@ Yen: -39/-௩௯
 
 ## Yezhuthu - Class
 
-### Sorting Array of Yezhuthu Objects - Different ways to initialise
+### Different ways to initialise
 
 ```java
 package com.ph.tamil.commons.drivers;
@@ -215,7 +215,7 @@ public class Driver {
 Yezhluthu Array: [ந, ஙூ, அ]
 ```
 
-### Sorting Array of Yezhuthu Objects - Comparing Objects with Different types of initialising
+### Comparing Objects with Different types of initialising
 
 ```java
 package com.ph.tamil.commons.drivers;
