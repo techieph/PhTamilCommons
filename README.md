@@ -480,7 +480,7 @@ public class Driver {
 }
 ```
 ```
-காத்திருந்தாள் is replaced to காத்திருந்தாள்
+காத்திருந்தான் is replaced to காத்திருந்தாள்
 காத்திருந்தாள் starts with காத்தி is true
 காத்திருந்தாள் starts with த்திருந் is false
 காத்திருந்தாள் ends with தாள் is true
