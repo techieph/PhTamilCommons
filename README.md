@@ -96,7 +96,10 @@ public class Driver {
 }
 ```
 ```
-All 3 objects are equal
+Two objects of 345/௩௪௫ are equal
+Two objects of -345/-௩௪௫ are equal
+Two objects of 1267890/௧௨௬௭௮௯௦ are equal
+Two objects of -1267890/-௧௨௬௭௮௯௦ are equal
 ```
 
 ### Yen - Few types of sortings
