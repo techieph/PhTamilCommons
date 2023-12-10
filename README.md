@@ -1,28 +1,5 @@
 # PhTamilCommons
 
-## Table Of Contents
-- [PhTamilCommons](#phtamilcommons)
-    - [Dependency](#dependency)
-        - [Building the Project](#building-the-project)
-        - [Contributions](#contributions)
-        - [License](#license)
-    - [Yen - Class](#yen---class)
-        - [Yen - Different types of creating objects and comparing them](#yen---different-types-of-creating-objects-and-comparing-them)
-    - [YenBasicOperations - Class](#yenbasicoperations---class)
-        - [YenBasicOperations - Different types of operations on Yen Object](#yenbasicoperations---different-types-of-operations-on-yen-object)
-    - [Yezhuthu - Class](#yezhuthu---class)
-        - [Sorting Array of Yezhuthu Objects - Different ways to initialise](#sorting-array-of-yezhuthu-objects---different-ways-to-initialise)
-        - [Sorting Array of Yezhuthu Objects - Comparing Objects with Different types of initialising](#sorting-array-of-yezhuthu-objects---comparing-objects-with-different-types-of-initialising)
-        - [Sorting Array of Yezhuthu Objects - Normal Sorting](#sorting-array-of-yezhuthu-objects---normal-sorting)
-        - [Sorting ArrayList of Yezhuthu Objects - Normal Sorting](#sorting-arraylist-of-yezhuthu-objects---normal-sorting)
-        - [Sorting ArrayList of Yezhuthu Objects - Based on the Sound level (maathirai)](#sorting-arraylist-of-yezhuthu-objects---based-on-the-sound-level-maathirai)
-        - [Sorting ArrayList of Yezhuthu Objects - Based on Yezhluthu Type (Uyir, Mei, UyirMei, Aayutham)](#sorting-arraylist-of-yezhuthu-objects---based-on-yezhluthu-type-uyir-mei-uyirmei-aayutham)
-        - [Sorting ArrayList of Yezhuthu Objects - Based on Yezhluthu Constant Type (Valinam, Melinam, Idaiyinam, NotApplicable)](#sorting-arraylist-of-yezhuthu-objects---based-on-yezhluthu-constant-type-valinam-melinam-idaiyinam-notapplicable)
-    - [Sol - Class](#sol---class)
-        - [Sol - Different types of creation and equals](#sol---different-types-of-creation-and-equals)
-        - [Sol - Few other string methods in sol](#sol---few-other-string-methods-in-sol)
-        - [Sol - Few types of sorting with Sol](#sol---few-types-of-sorting-with-sol)
-
 ## Dependency
 
 ### How to Use
@@ -57,6 +34,25 @@ Feel free to contribute to this project by reporting issues or submitting pull r
 
 License
 This project is licensed under the MIT License, so feel free to use, modify, and distribute it in your projects.
+
+## Table Of Contents
+- [PhTamilCommons](#phtamilcommons)
+    - [Yen - Class](#yen---class)
+        - [Yen - Different types of creating objects and comparing them](#yen---different-types-of-creating-objects-and-comparing-them)
+    - [YenBasicOperations - Class](#yenbasicoperations---class)
+        - [YenBasicOperations - Different types of operations on Yen Object](#yenbasicoperations---different-types-of-operations-on-yen-object)
+    - [Yezhuthu - Class](#yezhuthu---class)
+        - [Sorting Array of Yezhuthu Objects - Different ways to initialise](#sorting-array-of-yezhuthu-objects---different-ways-to-initialise)
+        - [Sorting Array of Yezhuthu Objects - Comparing Objects with Different types of initialising](#sorting-array-of-yezhuthu-objects---comparing-objects-with-different-types-of-initialising)
+        - [Sorting Array of Yezhuthu Objects - Normal Sorting](#sorting-array-of-yezhuthu-objects---normal-sorting)
+        - [Sorting ArrayList of Yezhuthu Objects - Normal Sorting](#sorting-arraylist-of-yezhuthu-objects---normal-sorting)
+        - [Sorting ArrayList of Yezhuthu Objects - Based on the Sound level (maathirai)](#sorting-arraylist-of-yezhuthu-objects---based-on-the-sound-level-maathirai)
+        - [Sorting ArrayList of Yezhuthu Objects - Based on Yezhluthu Type (Uyir, Mei, UyirMei, Aayutham)](#sorting-arraylist-of-yezhuthu-objects---based-on-yezhluthu-type-uyir-mei-uyirmei-aayutham)
+        - [Sorting ArrayList of Yezhuthu Objects - Based on Yezhluthu Constant Type (Valinam, Melinam, Idaiyinam, NotApplicable)](#sorting-arraylist-of-yezhuthu-objects---based-on-yezhluthu-constant-type-valinam-melinam-idaiyinam-notapplicable)
+    - [Sol - Class](#sol---class)
+        - [Sol - Different types of creation and equals](#sol---different-types-of-creation-and-equals)
+        - [Sol - Few other string methods in sol](#sol---few-other-string-methods-in-sol)
+        - [Sol - Few types of sorting with Sol](#sol---few-types-of-sorting-with-sol)
 
 ## Yen - Class
 
